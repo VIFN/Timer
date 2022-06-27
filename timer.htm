@@ -1,0 +1,1037 @@
+<!DOCTYPE css>
+<html lang="en">
+<head>
+<title>Timer</title>
+
+<style>
+.coolbutton {
+  border: none;
+  color: white;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+ 
+}
+
+.textposition{
+	position: relative;
+	left:20px;
+	top: 10px;
+}
+
+.textposition_interval{
+	position: relative;
+	left:20px;
+	top: 40px;
+	font-family:arial; display: table;
+}
+
+.text_properties{
+	color:Black;
+	font-size: 150px;
+	background-color: white;
+	outline: none;
+	border: 0px;
+
+}
+
+.buttonpoision_top{
+	position: absolute;
+	top: 90px;
+	
+
+}
+
+.buttonpoision_top_interval{
+	position: absolute;
+	top: 290px;	
+
+}
+
+.buttonposition_reset{
+	left: 770px;
+	background-color: #009999; 
+  	
+}
+
+.buttonposition_start{
+	left: 880px;
+	background-color: #6699FF; 
+
+}
+
+
+.buttonposition_show_all{
+	left:990px;
+	background-color: NavajoWhite ; 
+
+}
+.change_color:hover{
+	background-color: Black; 
+
+}
+.change_color_numbers:hover{
+	color: #1d3030 ;
+	cursor: pointer;
+}
+.reset_initial_visibility{
+	visibility: visible;
+}
+
+.edit_main_box_features {
+	  position: absolute;
+	  background-color: #fefefe;
+	  /*padding: 0;*/
+	  /*border: 1px solid red;*/
+	  width: 600px;
+	  height: 460px;
+	  left: 340px; /*640-width/2*/
+	  top: 40px;
+	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	  display: none;
+}
+
+.edit_main_box_features-header{
+	position: relative;
+	background-color: #24435c;
+	color:white;
+	padding: 1px 16px;
+	height:60px;
+	
+
+}
+.edit_timer{
+	position: absolute;
+    font-size: 28px;
+	left: 20px;
+	top: -10px;
+	font-family:times new roman;
+}
+.close{
+	color:white;
+	cursor: pointer;
+	position: absolute;
+	left: 555px;
+	top: 11px;
+	font-size: 40px;
+}
+.close:hover,
+.close:focus {
+	
+	color:white;
+	top:8px;
+	font-weight: bold;
+	font-size: 45px;
+}
+.edit_main_box_features-body{
+	position: relative;
+	background-color: #fffdf8;
+	color:white;
+	padding: 1px 16px;
+	height: 360px;
+}
+
+.edit_main_box_features-footer{
+	position: relative;
+	background-color:#2F4F4F;
+	color:white;
+	padding: 1px 16px;
+	height: 40px;
+}
+
+.done{
+	position: absolute;
+	left: 89%;
+	top: 28%;
+	background-color: LightGray ;
+	color: black;
+	  font-weight: bold;
+	width: 50px;
+	height: 20px;
+	text-align: center;
+	font-size: 12px;
+  	cursor: pointer;
+  	padding: 0px 0px;
+  	border: 1px SlateGray ;
+  	
+
+}
+.done:hover{
+	background-color: DarkGray ;
+
+}
+
+
+
+.input_number{
+	position: absolute;
+	top:20px; 
+	width:80px;
+	height: 40px;
+	font-size: 25px;
+	border-radius: 10px;
+	border: 0.5px solid black;
+
+}
+
+
+.input_number:focus{
+	
+	outline:none;
+	border: 1.5px solid black;
+
+	}
+
+.input_hours{
+	left:20px; 
+}
+.input_minutes{ 
+	left:120px; 
+	
+}
+
+.input_seconds{
+	left:220px; 
+}
+
+.two_dots_hours{
+	position: absolute;
+	color: Black;
+	top: 25px;
+	left: 105px;
+	font-size: 25px;
+	  font-weight: bold;
+}
+
+.two_dots_minutes{
+	position: absolute;
+	color: Black;
+	top: 25px;
+	left: 205px;
+	font-size: 25px;
+	  font-weight: bold;
+}
+
+.labels_time{
+	position: absolute;
+	color: Black;
+	top: 67px;
+	font-family:arial;
+	font-size: 16px;
+}
+
+.task_name{
+	position: absolute;
+	top:140px;
+	left: 20px;
+	font-size: 16px;
+	width: 280px;
+}
+.task_name_label{
+	position: absolute;
+	top: 120px;
+	left: 20px;
+	color: Black;
+}
+
+.line_separation{
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	width: 560px;
+	height: 1px;
+	border-bottom: 1px solid #e8e8e8;
+
+}
+.timer_end_alarm{
+	position: absolute;
+	left: 20px;
+	top: 200px;
+	font-size: 14px;
+	width: 150px;
+}
+
+.timer_end_alarm_label{
+	position: absolute;
+	left: 20px;
+	top: 180px;
+	color: Black;
+}
+.add_music_button{
+position: absolute; top: 200px;left: 210px; 
+background-color: 	CadetBlue ;
+ color:white;
+	border-radius: 50%;
+	border: 0px;
+	cursor: pointer;
+	outline: none;
+}
+.add_music_button:hover{
+	background-color: #4d7e80;
+}
+.add_music_button_to_listen{
+	position: absolute; top: 200px;left: 175px; 
+	background-color: #fffdf8;
+	cursor: pointer;
+	
+	border: 0px;
+}
+.notifications_label{
+	position: absolute;
+	color: black;
+	top: 240px;
+	left: 20px;
+}
+.notifications{
+	position: absolute;
+	color: black;
+	top: 260px;
+	left: 20px;
+	font-size: 14px;
+}
+.document_name_label{
+	position: absolute;
+	color: black;
+	top: 300px;
+	left: 20px;
+}
+.document_name{
+	position: absolute;
+	color: black;
+	top: 320px;
+	left: 20px;
+	font-size: 14px;
+}
+.document_search_button{
+	position: absolute;
+	top: 323px;
+	left: 210px;
+	background-color: #fffdf8;
+	border: 0px;
+	
+	cursor: pointer;
+
+}
+.time_completed_box_header{
+	position: absolute;
+	top: 130px;
+	left:420px;
+	background-color: #004d66;
+	color:white;
+	padding: 1px 16px;
+	height:60px;
+	width: 400px;
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.time_completed_a{
+	position: absolute;
+    font-size: 28px;
+	left: 105px;
+	top: -10px;
+	font-family:times new roman;
+}
+
+.time_completed_box_features{
+	position: absolute;
+	top: 190px;
+	left:420px;
+	background-color: #fffdf8;
+	color:white;
+	padding: 1px 16px;
+	height:100px;
+	width: 400px;
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+} 
+
+.button_restart{
+	position: relative;
+	top: 20px;
+	left: 30px;
+	background-color: #004d4d;
+	color: white;
+	font-size: 17px;
+	height: 60px;
+	width: 150px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.button_cancel{
+	position: relative;
+	top: 20px;
+	left: 60px;
+	background-color: #004d4d;
+	color: white;
+	font-size: 17px;
+	height: 60px;
+	width: 150px;
+	cursor: pointer;
+	border-radius: 10px;
+	
+}
+.time_done{
+	display: none;
+}
+
+.save_data_positions{
+	position: absolute;
+	top: 10px;
+	left:40px;
+
+}
+.save_data_positions2{
+	position: absolute;
+	top: 10px;
+	left:250px;
+
+}
+</style>
+<script src="https://kit.fontawesome.com/2b4cef2572.js" crossorigin="anonymous"></script>
+
+<p id="demo"></p>
+
+</head>
+
+<body>
+
+
+<div id="main_thing">
+<button id="lalala" class="textposition text_properties change_color_numbers" style="font-family:arial; display: inline"> 01:00:00</button> 
+<button id="reset_button_work" class="coolbutton buttonposition_start buttonpoision_top change_color"><i class="fas fa-redo-alt"></i>  Reset</button>
+<button id="start_work" class="coolbutton buttonposition_reset buttonpoision_top change_color"><i class="fas fa-hourglass-start"></i>  Start</button>
+<button id="show_all" class="coolbutton buttonposition_show_all buttonpoision_top change_color" ><i class="fas fa-eye-slash"></i>  Hide</button>
+<button id="interval_text" class="textposition_interval text_properties change_color_numbers">00:05:00</button> 
+<button id="interval_reset" class="coolbutton buttonposition_start buttonpoision_top_interval change_color reset_initial_visibility"><i class="fas fa-redo-alt"></i>  Reset</button>
+<button id="interval_start" class="coolbutton buttonposition_reset buttonpoision_top_interval change_color"><i class="fas fa-mug-hot"></i> Start</button>
+
+</div>
+
+
+
+<div id="time_completed_box_all" class="time_done"> 
+<div class="time_completed_box_header">
+		<p class="time_completed_a">Time completed     <i class="fas fa-leaf"></i></i></p>
+</div>	
+<div class="time_completed_box_features">
+	<button id="restart_button" class="button_restart"> Restart</button>
+	<button id="cancel_button" class="button_cancel"> Cancel</button>
+
+</div>	
+
+</div>
+
+
+
+<div>
+	<p id="tempooo" style="position: relative; top:100px;"></p>
+</div>
+
+<div id="edit box" class="edit_main_box_features">
+	<div class="edit_main_box_features-header">
+		<p class="edit_timer">Edit Timer</p>
+		<span id="close_button" class="close" >&times</span>
+	</div>
+
+<div class="edit_main_box_features-body"> 
+	<div class="line_separation"></div>
+	<form>
+		<input id="hours" type="number" name="timer" class="input_number input_hours" min=0>
+		<label for="hours" class="two_dots_hours"> : </label>
+		<label for="hours" class="input_hours labels_time"> Hrs </label>
+		<input id="minutes" type="number" name="timer" class="input_number input_minutes" min=0 max=60 >
+		<label for="hours" class="two_dots_minutes"> : </label>
+		<label for="minutes" class="labels_time input_minutes "> Mins </label>
+		<input id="seconds" type="number" name="timer" class="input_number input_seconds" min=0 max=60><br>			
+		<label for="seconds" class="input_seconds labels_time"> Secs </label>
+		<label class="task_name_label"> Task Name</label>
+		<input type="text" name="task name" class="task_name">
+		<label class="timer_end_alarm_label"> Timer End Alarm</label>
+		<!input list="songs" name="timer name" class="timer_end_alarm">
+		<select name="songs" id="music" class="timer_end_alarm">
+			<option value="positions"> positions</option>
+		  	<option value="bellyache"> bellyache </option>
+		  	<option value="bored">bored</option>
+		  	<option value="safety net">safety net</option>
+		 </select> 
+	     <label class="notifications_label">Notification</label>
+	     <select name="notification" class="notifications"> 
+	     	<option>yes</option>
+	     	<option>no</option>
+	     </select>
+	    <label class="document_name_label"> Document's name</label>
+		<input id ="file_name" type="search" name="document nam" class="document_name">
+		</form>
+		<button class="add_music_button">+</button>
+		<button class="add_music_button_to_listen"> <i class="fas fa-volume-up"></i></button>
+		<button class="document_search_button"><i class="fas fa-search"></i></button>
+</div>
+	
+<div class="edit_main_box_features-footer">
+	<p>  <button id="done_button" class="done">Done</button></p>
+</div>
+
+</div>
+
+<div id="edit box interval" class="edit_main_box_features">
+	<div class="edit_main_box_features-header">
+		<p class="edit_timer">Edit Interval Timer</p>
+		<span id="close_button_interval" class="close" >&times</span>
+	</div>
+
+<div class="edit_main_box_features-body"> 
+	<div class="line_separation"></div>
+	<form>
+		<input id="hours interval" type="number" name="timer" class="input_number input_hours" min=0>
+		<label for="hours interval" class="two_dots_hours"> : </label>
+		<label for="hours interval" class="input_hours labels_time"> Hrs </label>
+		<input id="minutes interval" type="number" name="timer" class="input_number input_minutes" min=0 max=60 >
+		<label for="hours interval" class="two_dots_minutes"> : </label>
+		<label for="minutes interval" class="labels_time input_minutes "> Mins </label>
+		<input id="seconds interval" type="number" name="timer" class="input_number input_seconds" min=0 max=60><br>
+		<label for="seconds interval" class="input_seconds labels_time"> Secs </label>
+		<label class="task_name_label"> Task Name</label>
+		<input type="text" name="task name" class="task_name">
+		<label class="timer_end_alarm_label"> Timer End Alarm</label>
+		<!input list="songs" name="timer name" class="timer_end_alarm">
+		<select name="songs" id="music interval" class="timer_end_alarm">
+			<option value="positions"> positions</option>
+		  	<option value="bellyache"> bellyache </option>
+		  	<option value="bored">bored</option>
+		  	<option value="safety net">safety net</option>	
+		 </select> 
+	     <label class="notifications_label">Notification</label>
+	     <select name="notification" class="notifications"> 
+	     	<option>yes</option>
+	     	<option>no</option>
+	     </select>
+	    <label class="document_name_label"> Document's name</label>
+		<input type="search" name="document nam" class="document_name">
+		</form>
+		<button class="add_music_button">+</button>
+		<button class="add_music_button_to_listen"> <i class="fas fa-volume-up"></i></button>
+		<button class="document_search_button"><i class="fas fa-search"></i></button>
+</div>
+	
+<div class="edit_main_box_features-footer">
+	<p>  <button id="done_button_interval" class="done">Done</button></p>
+</div>
+
+</div>
+
+<audio id="musica">
+  <source src="music/positions.mp3" >
+
+Your browser does not support the audio element.
+</audio>
+
+</body>
+
+<script>		
+
+
+var data = new Date()
+console.log("ms", data.getTime())
+console.log("width:", window.outerWidth);
+console.log("height:", window.outerHeight);
+var counts = 0;
+var horas = 1;
+var minutos = 0;
+var segundos =0;
+var hours_to_msecs = 1*60*60*1000;
+var minutes_to_msecs = 0;
+var seconds_to_msecs = 0;
+var total_time_in_msecs = 1*60*60*1000;
+var present_timer;
+var x = document.createElement("AUDIO");
+var chosen_song = "positions";
+var list_timestamps = [];
+
+var horas_intervalo = 0;
+var minutos_intervalo = 5;
+var segundos_intervalo = 0;
+var hours_to_msecs_intervalo = 0;
+var minutes_to_msecs_intervalo = 5*60*1000;
+var seconds_to_msecs_intervalo = 0;
+var total_time_in_msecs_intervalo = 5*60*1000;
+var present_timer_interval;
+var chosen_song_interval = "positions";
+
+// work timer
+document.getElementById("show_all").addEventListener('click', function(){
+	counting();
+	changeText();
+	changeVisibility();
+})
+
+document.getElementById("start_work").addEventListener('click', function(){
+	start_or_pause_timer();
+	change_to_pause();
+	change_title_work_start_or_pause();
+})
+
+document.getElementById("done_button").addEventListener('click', function(){
+	done("lalala", horas, minutos, segundos, hours_to_msecs, minutes_to_msecs, seconds_to_msecs);
+	hide_editor("edit box");
+})
+
+document.getElementById("reset_button_work").addEventListener('click', function(){	
+	done("lalala", horas, minutos, segundos, hours_to_msecs, minutes_to_msecs, seconds_to_msecs);
+})
+
+document.getElementById("lalala").addEventListener('click', function(){
+	show_editor("edit box")
+})
+
+document.getElementById("close_button").addEventListener('click', function(){
+	hide_editor("edit box")
+})
+
+document.getElementById("music").addEventListener('change', function(){
+	chosen_song = choose_song("music");
+})
+// interval timer
+document.getElementById("done_button_interval").addEventListener('click', function(){
+	done("interval_text", horas_intervalo, minutos_intervalo, segundos_intervalo, hours_to_msecs_intervalo, minutes_to_msecs_intervalo, seconds_to_msecs_intervalo);
+	hide_editor("edit box interval");
+})
+
+document.getElementById("close_button_interval").addEventListener('click', function(){
+	hide_editor("edit box interval")
+})
+document.getElementById("interval_text").addEventListener('click', function(){
+	show_editor("edit box interval")
+})
+
+document.getElementById("hours").addEventListener('blur', function(){
+	horas = retrieve_hours("hours")[0];
+	hours_to_msecs = retrieve_hours("hours")[1];
+})
+document.getElementById("minutes").addEventListener('blur', function(){
+	minutos = retrieve_minutes("minutes")[0];
+	minutes_to_msecs = retrieve_minutes("minutes")[1];
+})
+document.getElementById("seconds").addEventListener('blur', function(){
+	segundos = retrieve_seconds("seconds")[0];
+	seconds_to_msecs = retrieve_seconds("seconds")[1];
+})
+document.getElementById("hours interval").addEventListener('blur', function(){
+	horas_intervalo = retrieve_hours("hours interval")[0];
+	hours_to_msecs_intervalo = retrieve_hours("hours interval")[1];
+})
+document.getElementById("minutes interval").addEventListener('blur', function(){
+	minutos_intervalo = retrieve_minutes("minutes interval")[0];
+	minutes_to_msecs_intervalo = retrieve_minutes("minutes interval")[1];
+})
+document.getElementById("seconds interval").addEventListener('blur', function(){
+	segundos_intervalo = retrieve_seconds("seconds interval")[0];
+	seconds_to_msecs_intervalo = retrieve_seconds("seconds interval")[1];
+})
+
+document.getElementById("interval_start").addEventListener('click', function(){
+	start_or_pause_timer_interval();
+	change_to_pause_interval();
+	change_title_work_start_or_pause_interval();
+})
+document.getElementById("interval_reset").addEventListener('click', function(){
+	done("interval_text", horas_intervalo, minutos_intervalo, segundos_intervalo, hours_to_msecs_intervalo, minutes_to_msecs_intervalo, seconds_to_msecs_intervalo);
+})
+
+document.getElementById("music interval").addEventListener('change', function(){
+	chosen_song_interval = choose_song("music interval");
+	console.log('Música mudadaaaa', chosen_song_interval)
+})
+document.getElementById("cancel_button").onclick = hide_time_completed_box
+//document.getElementById("restart_button").onclick = restart_time
+
+document.getElementById("restart_button").addEventListener('click', function(){
+	restart_time_interval();
+})
+
+
+function saveTextAsFile()
+{
+  var textToSave = list_timestamps;
+  var tipo = typeof textToSave;
+	var d = new Date();
+	var s = d.toString();
+	var f = s.slice(3);
+	a = f.substring(1, 13);
+	
+	
+    var textToSaveAsBlob = new Blob([a, "[" +  "]  " + textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+
+    var fileName = document.getElementById("file_name").value;
+ 			
+ 	// Creating an object that is a link
+    var downloadLink = document.createElement("a");
+
+    // Name of the file that is being downloaded from the browser
+    downloadLink.download = fileName;
+    // Name of the link
+    downloadLink.innerHTML = "Download File";
+    // Text to save when you click the link and download the file
+    downloadLink.href = textToSaveAsURL;
+    //downloadLink.onclick = destroyClickedElement;
+
+    // Not displaying the link that is created named 'Download File'
+    downloadLink.style.display = "none";
+    //document.body.appendChild(downloadLink);
+    
+ 	// Clicking the object -- the same as clicking on a link, but we not see this happening in the browser
+    downloadLink.click();
+}
+
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+ 
+
+function choose_song(id_element){
+	var chosen_song_m = document.getElementById(id_element).value; 
+	console.log('chosen_song:',chosen_song_m);
+	return chosen_song_m
+
+}
+
+function play_sound(chosen_song_la){
+	x.src = "music/" + chosen_song_la + ".mp3";
+	x.autoplay = true;
+	console.log('playing sound:', chosen_song_la);
+}
+
+function stop_sound(){
+	x.pause();
+	x.currentTime = 0;
+}
+
+function hide_time_completed_box(){
+	var visibility_box_time_done = document.getElementById("time_completed_box_all").style.display;
+	document.getElementById("main_thing").style.opacity =  1;
+	document.getElementById("time_completed_box_all").style.display = "none";
+	document.getElementById("main_thing").style.pointerEvents = "auto";
+	stop_sound()
+}
+
+function restart_time(){
+	hide_time_completed_box();
+	done("lalala", horas, minutos, segundos, hours_to_msecs, minutes_to_msecs, seconds_to_msecs);
+	
+}
+function restart_time_interval(){
+	hide_time_completed_box();
+	done("interval_text", horas_intervalo, minutos_intervalo, segundos_intervalo, hours_to_msecs_intervalo, minutes_to_msecs_intervalo, seconds_to_msecs_intervalo);
+	
+}
+
+function change_title_work_start_or_pause(){
+
+	var text_s = document.getElementById("start_work").innerHTML;
+	if (text_s=='<i class="fas fa-hourglass-start" aria-hidden="true"></i>  Start'){
+		document.title = "Paused Timer" 
+	}
+	else{
+		document.title = "Started Timer"
+	}
+}
+
+function change_title_work_start_or_pause_interval(){
+
+	var text_s = document.getElementById("interval_start").innerHTML;
+	if (text_s=='<i class="fas fa-mug-hot" aria-hidden="true"></i> Start'){
+		document.title = "Paused Interval Timer" 
+	}
+	else{
+		document.title = "Started Interval Timer"
+	}
+}
+
+//what happens when you click in the button 'Done'
+function done(element_id, horas, minutos, segundos, hours_to_msecs, minutes_to_msecs, seconds_to_msecs){
+	if (element_id == "lalala"){
+		total_time_in_msecs = hours_to_msecs+minutes_to_msecs+seconds_to_msecs;
+	}
+	else{
+		total_time_in_msecs_intervalo = hours_to_msecs+minutes_to_msecs+seconds_to_msecs;
+	}
+	if (horas<10){
+		var a = '0'+horas;
+	}
+	else{
+		var a = horas;
+	}
+	if (minutos<10){
+		var b = '0'+minutos;
+	}
+	else{
+		var b = minutos;
+	}
+	if (segundos<10){
+		var c = '0'+ segundos;
+	}
+	else{
+		var c = segundos;
+	}
+	document.getElementById(element_id).innerHTML = " "+a+":"+b+":"+c+" "; //= convert_msecs_to_time(total_time_in_msecs);
+
+}
+
+function timer_counting(){
+	total_time_in_msecs = total_time_in_msecs -1000;
+	var values_time = convert_msecs_to_time(total_time_in_msecs);
+	document.getElementById("lalala").innerHTML = " "+values_time[0]+":"+values_time[1]+":"+values_time[2];
+	if (values_time[0]==0 && values_time[1]==0 && values_time[2]==0){
+		console.log('DONEEEE')
+		var visibility_box_time_done = document.getElementById("time_completed_box_all").style.display;
+		console.log("display_box_tume_up ", visibility_box_time_done);
+		document.getElementById("main_thing").style.opacity =  0.4;
+		document.getElementById("time_completed_box_all").style.display = "inline-block";
+		document.getElementById("main_thing").style.pointerEvents = "none";
+		change_to_pause();
+		play_sound(chosen_song);
+		document.title = "Timer";
+	}
+
+
+}
+
+function timer_counting_interval(){
+	total_time_in_msecs_intervalo = total_time_in_msecs_intervalo -1000;
+	var values_time_interval = convert_msecs_to_time(total_time_in_msecs_intervalo);
+	
+	console.log("hours=", values_time_interval[0]);
+	console.log("mins=", values_time_interval[1]);
+	console.log("secs=", values_time_interval[2]);
+	if (values_time_interval[0]<10){
+		values_time_interval[0] = '0'+values_time_interval[0];
+	}
+	
+	if (values_time_interval[1]<10){
+		values_time_interval[1] = '0'+values_time_interval[1];
+	}
+	
+	if (values_time_interval[2]<10){
+		values_time_interval[2] = '0'+ values_time_interval[2];
+	}
+
+	if (total_time_in_msecs_intervalo==0){
+		clearInterval(present_timer_interval);
+		document.getElementById("interval_text").innerHTML = " 00:00:00";
+	}
+	else{
+		document.getElementById("interval_text").innerHTML = " "+values_time_interval[0]+":"+values_time_interval[1]+":"+values_time_interval[2];
+
+	}
+	
+	if (values_time_interval[0]==0 && values_time_interval[1]==0 && values_time_interval[2]==0){
+		console.log('DONEEEE INTERVALOOO')
+		var visibility_box_time_done = document.getElementById("time_completed_box_all").style.display;
+		console.log("display_box_tume_up ", visibility_box_time_done);
+		document.getElementById("main_thing").style.opacity =  0.4;
+		document.getElementById("time_completed_box_all").style.display = "inline-block";
+		document.getElementById("main_thing").style.pointerEvents = "none";
+		change_to_pause_interval();
+		play_sound(chosen_song_interval);
+		document.title = "Timer";
+	}
+
+}
+
+function convert_time_to_msecs(hours_normal, minutes_normal, seconds_normal){
+
+	hours_msecs = hours_normal*60*60*1000;
+	minutes_msecs = minutes_normal*60*1000;
+	seconds_msecs = seconds_normal*1000;
+	time_msecs_from_normal = hours_to_msecs +  minutes_msecs + seconds_msecs;
+
+	return time_msecs_from_normal;
+}
+
+function convert_msecs_to_time(time_in_msecs){
+	//convert msecs to time in hrs:mins:secs
+	var horas_convertidas = parseInt(time_in_msecs/(1000*60*60));
+	var minutos_convertidos = parseInt((time_in_msecs-horas_convertidas*(1000*60*60))/(1000*60));
+	var segundos_convertidos = parseInt((time_in_msecs-horas_convertidas*(1000*60*60)-minutos_convertidos*(1000*60))/(1000));
+	return [horas_convertidas, minutos_convertidos, segundos_convertidos];
+}	
+
+function save_data(){
+		var textToSave = list_timestamps;
+	    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+	    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+
+	    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+	 
+	    var downloadLink = document.createElement("a");
+	    downloadLink.download = fileNameToSaveAs;
+	    downloadLink.innerHTML = "Download File";
+	    downloadLink.href = textToSaveAsURL;
+	    downloadLink.onclick = destroyClickedElement;
+	    downloadLink.style.display = "none";
+	    document.body.appendChild(downloadLink);
+	 
+	    downloadLink.click();
+}
+function start_or_pause_timer(){
+	var start_or_pause = document.getElementById("start_work").innerHTML;
+	
+	if (start_or_pause=='<i class="fas fa-hourglass-start" aria-hidden="true"></i>  Start'){
+		present_timer = window.setInterval(timer_counting, 1000);
+		document.getElementById("reset_button_work").disabled = true;
+		document.getElementById("reset_button_work").style.opacity = 0.5;
+		var d = new Date();
+		var s = d.toString();
+		var f = s.slice(15);
+		a = f.substring(1, 9);
+		list_timestamps.push(a);
+		//console.log(list_timestamps);
+
+		// check unload event
+	}
+
+	else{
+		clearInterval(present_timer);
+		document.getElementById("reset_button_work").disabled = false;
+		document.getElementById("reset_button_work").style.opacity = 1;
+
+	}
+
+}
+
+function start_or_pause_timer_interval(){
+	var start_or_pause_interval = document.getElementById("interval_start").innerHTML;
+	if (start_or_pause_interval=='<i class="fas fa-mug-hot" aria-hidden="true"></i> Start'){
+		present_timer_interval = window.setInterval(timer_counting_interval, 1000);
+		document.getElementById("interval_reset").disabled = true;
+		document.getElementById("interval_reset").style.opacity = 0.5;
+
+	}
+
+	else{
+		clearInterval(present_timer_interval);
+		document.getElementById("interval_reset").disabled = false;
+		document.getElementById("interval_reset").style.opacity = 1;
+
+	}
+
+
+}
+
+
+function retrieve_hours(hours_id){
+
+	horas = document.getElementById(hours_id).value;
+	hours_to_msecs = horas*60*60*1000;
+	
+	var hours_array = [horas, hours_to_msecs]
+	return hours_array
+}
+
+function retrieve_minutes(minutes_id){
+	minutos = document.getElementById(minutes_id).value;
+	minutes_to_msecs = minutos*60*1000;
+
+	var minutes_array = [minutos, minutes_to_msecs]
+	return minutes_array
+}
+
+
+function retrieve_seconds(seconds_id){
+	segundos = document.getElementById(seconds_id).value;
+	seconds_to_msecs = segundos*1000;
+
+	var seconds_array = [segundos, seconds_to_msecs]
+	return seconds_array
+}
+
+
+
+function hide_editor(element_id){
+	var visibility_box_editor = document.getElementById(element_id).style.display;
+	document.getElementById(element_id).style.display = "none";
+	document.getElementById("main_thing").style.opacity = 1;
+
+}
+
+function show_editor(element_id){
+	var visibility_box_editor = document.getElementById(element_id).style.display;
+	document.getElementById(element_id).style.display  = "inline-block";
+	document.getElementById("main_thing").style.opacity =  0.4;
+	//document.getElementById("main_thing").style.backgroundColor = "rgba(0,0,0,0.4)";
+
+}
+
+
+function counting(){
+	
+	if (counts == 0){
+		document.getElementById("interval_reset").style.visibility = "visible";
+
+	}
+	counts = counts + 1;
+	
+	
+}
+
+function change_to_pause(){
+
+	var text_pause = document.getElementById("start_work").innerHTML;
+	if (text_pause=='<i class="fas fa-hourglass-start" aria-hidden="true"></i>  Start'){
+		document.getElementById("start_work").innerHTML = '<i class="fas fa-chess-queen" aria-hidden="true"></i>   Pause';
+	}
+	else{
+		document.getElementById("start_work").innerHTML = '<i class="fas fa-hourglass-start" aria-hidden="true"></i>  Start';
+	}
+
+}
+
+function change_to_pause_interval(){
+
+	var text_pause = document.getElementById("interval_start").innerHTML;
+	if (text_pause=='<i class="fas fa-mug-hot" aria-hidden="true"></i> Start'){
+		document.getElementById("interval_start").innerHTML = '<i class="fas fa-chess-king" aria-hidden="true"></i>   Pause';
+	}
+	else{
+		document.getElementById("interval_start").innerHTML = '<i class="fas fa-mug-hot" aria-hidden="true"></i> Start';
+	}
+
+}
+
+function changeText(){
+
+	var texto = document.getElementById("show_all").innerHTML;
+	if (texto=='<i class="fas fa-eye-slash" aria-hidden="true"></i>  Hide') {
+		document.getElementById("show_all").innerHTML = '<i class="fas fa-eye"></i> Show';
+	}
+	else {
+		document.getElementById("show_all").innerHTML = '<i class="fas fa-eye-slash"></i>  Hide';
+	}
+	
+}
+
+function changeVisibility() {
+
+	var state = document.getElementById("interval_reset").style.visibility;
+	
+	if (state == "visible"){
+		document.getElementById("interval_text").style.visibility = "hidden";
+		document.getElementById("interval_start").style.visibility = "hidden";
+		document.getElementById("interval_reset").style.visibility = "hidden";
+	}
+	else {
+		document.getElementById("interval_text").style.visibility = "visible";
+  		document.getElementById("interval_start").style.visibility = "visible";
+  		document.getElementById("interval_reset").style.visibility = "visible";
+		}
+	}
+
+</script>
+
+</html>
+
