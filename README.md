@@ -11,3 +11,4 @@
 
 
 
+Note: Some features are not implemented yet, such as: adding new songs, notifications after the alarm rings and saving the beginning and ending times of the sessions in a document. 
